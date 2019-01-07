@@ -5,4 +5,4 @@ A set of palettes for maps
 library(devtools)
 install_github("HughSt/mappalettes/mappalettes")
 
-![alt text](https://www.dropbox.com/s/stf6h9thoi3d7nx/hugh_div_swz_elev.png?dl=0)
+![alt text](https://raw.githubusercontent.com/HughSt/mappalettes/master/mappalettes/images/hugh_div_swz_elev.png)
