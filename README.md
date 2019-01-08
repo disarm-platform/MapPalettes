@@ -1,5 +1,5 @@
 # mappalettes
-A set of palettes for maps
+A set of awesome palettes for maps designed by the DiSARM team at UCSF
 
 # Install
 ```r
