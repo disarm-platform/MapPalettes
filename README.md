@@ -4,7 +4,7 @@ A set of awesome palettes for maps designed by the DiSARM team at UCSF
 # Install
 ```r
 library(devtools)  
-install_github("HughSt/MapPalettes")
+install_github("disarm-platform/MapPalettes")
 library(MapPalettes)
 ```
 
