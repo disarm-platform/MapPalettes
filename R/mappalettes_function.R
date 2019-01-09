@@ -10,7 +10,7 @@
 map_palette <- function(name,
                         n=5){
   
-  if(name=="hugh_div"){
+  if(name=="green_machine"){
     palette <- c("#1D3141","#096168","#209478","#75C56E","#E2EE5E")
   }
     
