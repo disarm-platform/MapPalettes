@@ -29,6 +29,10 @@ map_palette <- function(name,
   if(name=="the_joker"){
     palette <- c("#488f31", "#8cbcac", "#f1f1f1", "#b896d6", "#783dba")
   }
+  
+  if(name=="bruiser"){
+    palette <- c("#1E313E","#43435A","#725370","#A4607C","#D4717D","#FA8975")
+  }
     
     pal <- colorRampPalette(palette)
     pal(n)
