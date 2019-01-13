@@ -2,17 +2,19 @@
 % Please edit documentation in R/viewpalettes_function.R
 \name{view_palette}
 \alias{view_palette}
-\title{The map palette function}
+\title{The view palette function}
 \usage{
-view_palette(name, n = 5)
+view_palette(name, n = 5, type = "bars")
 }
 \arguments{
 \item{name}{The name of the palette}
 
 \item{n}{The number of colors in the palette}
+
+\item{type}{Either "bars" which shows palette as bars, "raster" which shows elevation in Swaziland or "polys" which shows mean elevation in Swaziland by admin 2 area.}
 }
 \description{
-This function allows you to easily access beautiful palettes designed for maps.
+This function allows you to easily view beautiful palettes designed for maps.
 }
 \examples{
 view_palette("green_machine")

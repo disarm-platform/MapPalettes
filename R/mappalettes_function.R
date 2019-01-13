@@ -17,6 +17,18 @@ map_palette <- function(name,
   if(name=="irish_flag"){
     palette <- c("#2a8f27", "#95c08b", "#f1f1f1", "#ffbefe", "#ff8b26")
   }
+  
+  if(name=="tealberry_pie"){
+    palette <- c("#00778a", "#82a2bf", "#d4d2e5", "#b77daf", "#a30248")
+  }
+  
+  if(name=="sunset"){
+    palette <- c("#f09000", "#fec289", "#f6f6f6", "#9dc7e4", "#0099d1")
+  }
+  
+  if(name=="the_joker"){
+    palette <- c("#488f31", "#8cbcac", "#f1f1f1", "#b896d6", "#783dba")
+  }
     
     pal <- colorRampPalette(palette)
     pal(n)
