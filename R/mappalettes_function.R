@@ -5,13 +5,17 @@
 #' @param n The number of colors in the palette
 #' @keywords cats
 #' @export
-#' @examples map_palette("hugh_div)
+#' @examples map_palette("green_machine")
 
 map_palette <- function(name,
                         n=5){
   
   if(name=="green_machine"){
     palette <- c("#1D3141","#096168","#209478","#75C56E","#E2EE5E")
+  }
+  
+  if(name=="irish_flag"){
+    palette <- c("#2a8f27", "#95c08b", "#f1f1f1", "#ffbefe", "#ff8b26")
   }
     
     pal <- colorRampPalette(palette)
