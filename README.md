@@ -10,14 +10,14 @@ library(MapPalettes)
 
 # Examples
 ```r
-view_palette(map_palette("green_machine", n=64), type = "raster") 
+view_palette("green_machine", n=64, type = "raster") 
 ```
 ![alt text](https://raw.githubusercontent.com/HughSt/mappalettes/master/images/hugh_div_swz_elev.png)
 
 ```r
 # To create a hex bin plot from a raster
 elevation <- raster::getData('alt', country="SWZ")
-hexbins <- hexbin_raster(elevation, n=200, mean)
+hexbins <- hexbin_raster(elevation, n=300, function(x) mean(x, na.rm = TRUE))
 col_pal <- colorNumeric(map_palette("bruiser", n=10), hexbins$stat)
 plot(hexbins, col = col_pal(hexbins$stat))
 ```

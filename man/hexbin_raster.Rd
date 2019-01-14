@@ -11,12 +11,15 @@ hexbin_raster(r, n, fun)
 
 \item{n}{The approximate number of hexbin cells}
 
-\item{fun}{The function you want to apply (e.g. mean, max, min) when summarizing raster values in each hexbin}
+\item{fun}{The function you want to apply when summarizing raster values in each hexbin.
+Note that hexbin_raster uses velox which currently does not support na.rm. To ignore NAs
+pass function which includes na.rm. See examples.}
 }
 \description{
 This function allows you to create a hexbin plot of a rasterLayer.
 }
 \examples{
-hexbin_raster("swz_elev", 100, mean)
+# Generate hexbins and calculate raster mean in each bin
+hexbin_raster("swz_elev", 100, function(x) mean(x, na.rm=TRUE))
 }
 \keyword{hexbin}
