@@ -1,12 +1,14 @@
 #' The view palette function
 #'
 #' This function allows you to easily view beautiful palettes designed for maps.
-#' @param name The name of the palette 
-#' @param n The number of colors in the palette
-#' @param type Either "bars" which shows palette as bars, "raster" which shows elevation in Swaziland or "polys" which shows mean elevation in Swaziland by admin 2 area. 
-#' @keywords cats
+#' @param name The name of the palette. One of "green_machine",
+#' "irish_flag", "tealberry_pie", "sunset", "the_joker" or "bruiser".
+#' @param n The number of colors in the palette, Defaults to 5. 
+#' @param type Either "bars" which shows palette as bars, 
+#' "raster" which shows elevation in Swaziland or "polys" which 
+#' shows mean elevation in Swaziland by admin 2 area. 
 #' @export
-#' @examples view_palette("green_machine")
+#' @examples view_palette("bruiser")
  
 view_palette <- function(name, 
                          n = 5,

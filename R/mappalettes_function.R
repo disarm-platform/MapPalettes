@@ -1,8 +1,10 @@
 #' The map palette function
 #'
 #' This function allows you to easily access beautiful palettes designed for maps.
-#' @param name The name of the palette 
-#' @param n The number of colors in the palette
+#' @param name The name of the palette. One of "green_machine",
+#' "irish_flag", "tealberry_pie", "sunset", "the_joker" or "bruiser"
+#' @param n The number of colors in the palette. Defaults to 5. 
+#' @return The hex codes of the n colors in the palette
 #' @keywords cats
 #' @export
 #' @examples map_palette("green_machine")
