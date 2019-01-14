@@ -7,6 +7,7 @@
 #' @param type Either "bars" which shows palette as bars, 
 #' "raster" which shows elevation in Swaziland or "polys" which 
 #' shows mean elevation in Swaziland by admin 2 area. 
+#' @import leaflet
 #' @export
 #' @examples view_palette("bruiser")
  
@@ -24,7 +25,7 @@ view_palette <- function(name,
   
   if(type=="polys"){
     data("adm2")
-    pal <- colorNumeric(map_palette(name, n), adm2$elev)
+    pal <- leaflet::colorNumeric(map_palette(name, n), adm2$elev)
     plot(adm2, col=pal(adm2$elev))
   }
   
