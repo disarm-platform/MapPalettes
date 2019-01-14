@@ -7,6 +7,9 @@ library(devtools)
 install_github("disarm-platform/MapPalettes")
 library(MapPalettes)
 ```
+# Palettes
+![alt text](https://raw.githubusercontent.com/HughSt/mappalettes/master/images/palettes.png)
+
 
 # Examples
 ```r
