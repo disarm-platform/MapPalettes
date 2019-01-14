@@ -1,4 +1,4 @@
-#' The view palette function
+#' The hexbin_raster function
 #'
 #' This function allows you to create a hexbin plot of a rasterLayer.
 #' @param r The rasterLayer 
@@ -7,11 +7,6 @@
 #' @keywords hexbin
 #' @export
 #' @examples hexbin_raster("swz_elev", 100, mean)
-
-library(sp)
-library(leaflet)
-library(velox)
-
 
 hexbin_raster <- function(r, n, fun){
   

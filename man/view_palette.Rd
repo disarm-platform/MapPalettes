@@ -7,16 +7,18 @@
 view_palette(name, n = 5, type = "bars")
 }
 \arguments{
-\item{name}{The name of the palette}
+\item{name}{The name of the palette. One of "green_machine",
+"irish_flag", "tealberry_pie", "sunset", "the_joker" or "bruiser".}
 
-\item{n}{The number of colors in the palette}
+\item{n}{The number of colors in the palette, Defaults to 5.}
 
-\item{type}{Either "bars" which shows palette as bars, "raster" which shows elevation in Swaziland or "polys" which shows mean elevation in Swaziland by admin 2 area.}
+\item{type}{Either "bars" which shows palette as bars, 
+"raster" which shows elevation in Swaziland or "polys" which 
+shows mean elevation in Swaziland by admin 2 area.}
 }
 \description{
 This function allows you to easily view beautiful palettes designed for maps.
 }
 \examples{
-view_palette("green_machine")
+view_palette("bruiser")
 }
-\keyword{cats}

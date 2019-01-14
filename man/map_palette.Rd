@@ -7,9 +7,13 @@
 map_palette(name, n = 5)
 }
 \arguments{
-\item{name}{The name of the palette}
+\item{name}{The name of the palette. One of "green_machine",
+"irish_flag", "tealberry_pie", "sunset", "the_joker" or "bruiser"}
 
-\item{n}{The number of colors in the palette}
+\item{n}{The number of colors in the palette. Defaults to 5.}
+}
+\value{
+The hex codes of the n colors in the palette
 }
 \description{
 This function allows you to easily access beautiful palettes designed for maps.
