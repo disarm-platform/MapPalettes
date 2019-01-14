@@ -21,3 +21,4 @@ hexbins <- hexbin_raster(elevation, n=300, function(x) mean(x, na.rm = TRUE))
 col_pal <- colorNumeric(map_palette("bruiser", n=10), hexbins$stat)
 plot(hexbins, col = col_pal(hexbins$stat))
 ```
+![alt text](https://raw.githubusercontent.com/HughSt/mappalettes/master/images/hexbin_bruiser.png)
