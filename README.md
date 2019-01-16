@@ -28,4 +28,7 @@ plot(hexbins, col = col_pal(hexbins$stat))
 ```r
 # To get main color groups from an image
 get_colors_from_image("https://upload.wikimedia.org/wikipedia/commons/e/e3/Red-eyed_Tree_Frog_%28Agalychnis_callidryas%29_1.png")
+[1] "#5E8527" "#35374A" "#A4AD5F" "#CD3F09" "#6BC221" "#342610" "#010100"
+[8] "#567096"
+```
 <img src="https://raw.githubusercontent.com/HughSt/mappalettes/master/images/frog_colors.png" width="500">
