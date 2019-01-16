@@ -1,23 +1,31 @@
-library(imager)
-library(raster)
-library(rgdal)
-library(RColorBrewer)
+#' The get_colors_from_image function
+#'
+#' This function allows you to identify the dominant colors in a jpg image.
+#' @param image The path to the image. Supports most image types. 
+#' See image_read from magick package. 
+#' @param n The number of colors in the palette. Defaults to 5. 
+#' @return The hex codes of the n colors in the palette
+#' @export
+#' @examples get_colors_from_image("https://upload.wikimedia.org/wikipedia/commons/e/e3/Red-eyed_Tree_Frog_%28Agalychnis_callidryas%29_1.png")
 
 # read image
 get_colors_from_image <- function(image, n=5){
   
-      pic <- load.image(image)
+      pic <- image_read(image)
+      
+      # Resample to lower res
+      pic <- image_scale(pic, "300x")
 
       # Convert to raster
       tiff_file <- paste0(tempfile(),"pic.jpeg")
-      save.image(pic, tiff_file, quality = 0.5)
+      image_write(pic, path = tiff_file, format = 'tiff')
       pic_raster <- raster::brick(tiff_file)
       
-      # Resample to lower res
-      # agg_factor <- dim(pic_raster)[1:2][which.max(dim(pic_raster)[1:2])] /300
+
       # pic_raster <- aggregate(pic_raster, agg_factor)
 
       # Get main clusters
+      set.seed(1981)
       clusters <- kmeans(values(pic_raster), n)
       dom_clusters <- rev(sort(table(clusters$cluster)))[1:n]
       means <- round(aggregate(values(pic_raster), list(clusters$cluster), mean), 0) 
@@ -31,13 +39,14 @@ get_colors_from_image <- function(image, n=5){
       }
       
       par(mfrow=c(1,2), mar=rep(2,4))
-      plot(pic, axes=F)
+      plot(pic)
       barplot(rep(1, length(colors)), 
               axes=F, 
               space=0, 
               border=NA,
               col = colors)
-      mtext(colors, at=seq(0.5, 4.5, 1))
+      #mtext(colors, at=seq(0.5, n-0.5, length.out = n),
+      #      las = 0, cex=0.6)
       
       return(colors)
 }

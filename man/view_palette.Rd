@@ -24,5 +24,6 @@ This function allows you to easily view beautiful palettes designed for maps.
 view_palette("bruiser")
 
 # Use custom set of hexcodes
-view_palette(c("#1D3141","#096168","#209478","#75C56E","#E2EE5E"), type="raster")
+view_palette(c("#1D3141","#096168","#209478","#75C56E","#E2EE5E"), 
+type="raster")
 }
