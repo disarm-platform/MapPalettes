@@ -3,9 +3,9 @@ Title: What the Package Does (one line, title case)
 Version: 0.0.0.9000
 Authors@R: person("Hugh", "Sturrock", email = "hughsturrock@gmail.com", role = c("aut", "cre"))
 Description: Neat mapping palettes.
-Depends: R (>= 3.4.0)
+Depends: R (>= 3.5.0)
 License: MIT
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
-Imports: leaflet, raster, sp, imager
+Imports: leaflet, raster, sp, magick
