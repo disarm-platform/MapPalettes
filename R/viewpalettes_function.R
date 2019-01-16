@@ -11,6 +11,10 @@
 #' @import leaflet
 #' @export
 #' @examples view_palette("bruiser")
+#' 
+#' # Use custom set of hexcodes
+#' view_palette(c("#1D3141","#096168","#209478","#75C56E","#E2EE5E"), 
+#' type="raster")
  
 view_palette <- function(name,
                          n = 5,

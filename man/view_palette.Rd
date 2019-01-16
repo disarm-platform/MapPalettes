@@ -8,7 +8,8 @@ view_palette(name, n = 5, type = "bars")
 }
 \arguments{
 \item{name}{The name of the palette. One of "green_machine",
-"irish_flag", "tealberry_pie", "sunset", "the_joker" or "bruiser".}
+"irish_flag", "tealberry_pie", "sunset", "the_joker" or "bruiser"
+or a vector of 5 hex codes.}
 
 \item{n}{The number of colors in the palette, Defaults to 5.}
 
@@ -21,4 +22,7 @@ This function allows you to easily view beautiful palettes designed for maps.
 }
 \examples{
 view_palette("bruiser")
+
+# Use custom set of hexcodes
+view_palette(c("#1D3141","#096168","#209478","#75C56E","#E2EE5E"), type="raster")
 }

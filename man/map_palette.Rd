@@ -7,7 +7,7 @@
 map_palette(name, n = 5)
 }
 \arguments{
-\item{name}{The name of the palette. One of "green_machine",
+\item{name}{The name of the palette as one of "green_machine",
 "irish_flag", "tealberry_pie", "sunset", "the_joker" or "bruiser"}
 
 \item{n}{The number of colors in the palette. Defaults to 5.}
