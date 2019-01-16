@@ -1,6 +1,6 @@
 #' The get_colors_from_image function
 #'
-#' This function allows you to identify the dominant colors in a jpg image.
+#' This function allows you to identify the dominant colors in an image.
 #' @param image The path to the image. Supports most image types. 
 #' See image_read from magick package. 
 #' @param n The number of colors in the palette. Defaults to 5. 

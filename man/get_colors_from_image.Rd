@@ -7,7 +7,8 @@
 get_colors_from_image(image, n = 5)
 }
 \arguments{
-\item{image}{The path to the .jpg image.}
+\item{image}{The path to the image. Supports most image types. 
+See image_read from magick package.}
 
 \item{n}{The number of colors in the palette. Defaults to 5.}
 }
@@ -15,7 +16,7 @@ get_colors_from_image(image, n = 5)
 The hex codes of the n colors in the palette
 }
 \description{
-This function allows you to identify the dominant colors in a jpg image.
+This function allows you to identify the dominant colors in an image.
 }
 \examples{
 get_colors_from_image("https://upload.wikimedia.org/wikipedia/commons/e/e3/Red-eyed_Tree_Frog_\%28Agalychnis_callidryas\%29_1.png")
