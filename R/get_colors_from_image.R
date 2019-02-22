@@ -26,7 +26,7 @@ get_colors_from_image <- function(image, n=5){
       set.seed(1981)
       clusters <- kmeans(values(pic_raster), n)
       dom_clusters <- rev(sort(table(clusters$cluster)))[1:n]
-      means <- round(aggregate(values(pic_raster), list(clusters$cluster), mean), 0)
+      means <- round(aggregate(raster::values(pic_raster), list(clusters$cluster), mean), 0)
       means <- subset(means, means$Group.1 %in% names(dom_clusters))
       colors <- NULL
       for(i in 1:nrow(means)){
