@@ -18,6 +18,7 @@ view_palette("green_machine", n=64, type = "raster")
 
 ```r
 # To create a hex bin plot from a raster
+library(leaflet) # for colorNumeric function
 elevation <- raster::getData('alt', country="SWZ")
 hexbins <- hexbin_raster(elevation, n=300, function(x) mean(x, na.rm = TRUE))
 col_pal <- colorNumeric(map_palette("bruiser", n=10), hexbins$stat)
