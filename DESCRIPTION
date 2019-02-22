@@ -2,7 +2,7 @@ Package: MapPalettes
 Title: What the Package Does (one line, title case)
 Version: 0.0.0.9000
 Authors@R: person("Hugh", "Sturrock", email = "hughsturrock@gmail.com", role = c("aut", "cre"))
-Description: Neat mapping palettes.
+Description: Neat mapping palettes and functions.
 Depends: R (>= 3.5.0)
 License: MIT
 Encoding: UTF-8
