@@ -20,6 +20,6 @@ This function allows you to create a hexbin plot of a rasterLayer.
 }
 \examples{
 # Generate hexbins and calculate raster mean in each bin
-hexbin_raster("swz_elev", 100, function(x) mean(x, na.rm=TRUE))
+hexbin_raster("swz_elev", n=100, function(x) mean(x, na.rm=TRUE))
 }
 \keyword{hexbin}
