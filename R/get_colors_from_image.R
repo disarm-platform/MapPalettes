@@ -6,9 +6,13 @@
 #' @param n The number of colors in the palette. Defaults to 5.
 #' @return The hex codes of the n colors in the palette
 #' @export
+#' @import magick
 #' @examples get_colors_from_image("https://upload.wikimedia.org/wikipedia/commons/e/e3/Red-eyed_Tree_Frog_%28Agalychnis_callidryas%29_1.png")
 
-# read image
+
+library(magick)
+library(raster)
+
 get_colors_from_image <- function(image, n=5){
 
       pic <- image_read(image)
