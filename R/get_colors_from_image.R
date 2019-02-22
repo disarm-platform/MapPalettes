@@ -6,7 +6,7 @@
 #' @param n The number of colors in the palette. Defaults to 5.
 #' @return The hex codes of the n colors in the palette
 #' @export
-#' @import magick
+#' @import magick raster
 #' @examples get_colors_from_image("https://upload.wikimedia.org/wikipedia/commons/e/e3/Red-eyed_Tree_Frog_%28Agalychnis_callidryas%29_1.png")
 
 
