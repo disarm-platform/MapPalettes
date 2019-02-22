@@ -10,12 +10,9 @@
 #' @examples get_colors_from_image("https://upload.wikimedia.org/wikipedia/commons/e/e3/Red-eyed_Tree_Frog_%28Agalychnis_callidryas%29_1.png")
 
 
-library(magick)
-library(raster)
-
 get_colors_from_image <- function(image, n=5){
 
-      pic <- image_read(image)
+      pic <- magick::image_read(image)
 
       # Resample to lower res
       pic <- image_scale(pic, "300x")
