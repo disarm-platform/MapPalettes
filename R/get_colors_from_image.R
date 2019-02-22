@@ -22,7 +22,6 @@ get_colors_from_image <- function(image, n=5){
       image_write(pic, path = tiff_file, format = 'tiff')
       pic_raster <- raster::brick(tiff_file)
 
-
       # Get main clusters
       set.seed(1981)
       clusters <- kmeans(values(pic_raster), n)
