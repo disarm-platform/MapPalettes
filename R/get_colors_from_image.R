@@ -12,7 +12,7 @@
 
 get_colors_from_image <- function(image, n=5){
 
-      pic <- magick::image_read(image)
+      pic <- image_read(image)
 
       # Resample to lower res
       pic <- image_scale(pic, "300x")
@@ -64,7 +64,6 @@ get_colors_from_image <- function(image, n=5){
       # }
 
       hc <- hclust(dist(RGBs))
-      browser()
       par(mfrow=c(1,2), mar=rep(2,4))
       plot(pic)
       barplot(rep(1, length(colors)),
