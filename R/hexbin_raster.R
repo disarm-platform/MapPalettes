@@ -6,6 +6,8 @@
 #' @param fun The function you want to apply when summarizing raster values in each hexbin.
 #' Note that hexbin_raster uses velox which currently does not support na.rm. To ignore NAs
 #' pass function which includes na.rm. See examples.
+#' @import velox raster sp
+#' @export
 #' @keywords hexbin
 #' @examples # Generate hexbins and calculate raster mean in each bin
 #' hexbin_raster("swz_elev", n = 100, function(x) mean(x, na.rm=TRUE))
