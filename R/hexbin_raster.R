@@ -19,6 +19,7 @@ hexbin_raster <- function(r, n, fun){
   r_sp <- as(r, "SpatialPixelsDataFrame")
 
   # Create hexbin
+  set.seed(1981)
   HexPts <-spsample(r_sp, n=n, type="hexagonal")
   HexPols <- HexPoints2SpatialPolygons(HexPts)
 
