@@ -35,7 +35,7 @@ view_palette <- function(name,
   }
 
   if(type=="polys"){
-    data("adm2")
+    data("swz_adm2")
     pal <- leaflet::colorNumeric(palette, adm2$elev)
     plot(adm2, col=pal(adm2$elev))
   }
