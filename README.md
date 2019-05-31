@@ -49,7 +49,7 @@ leaflet() %>% addProviderTiles("CartoDB.DarkMatter") %>%
           addLegend(pal = col_pal, values = hexbins$coverage, 
           title = "Coverage")
 ```
-<img src="https://raw.githubusercontent.com/HughSt/mappalettes/master/images/hexbin_points_leaflet.png" width="500">
+<img src="https://raw.githubusercontent.com/HughSt/mappalettes/master/images/hexbin_points_leaflet.png" width="800">
 
 
 ### To get main color groups from an image
