@@ -27,7 +27,7 @@ plot(hexbins, col = col_pal(hexbins$stat))
 <img src="https://raw.githubusercontent.com/HughSt/mappalettes/master/images/hexbin_bruiser.png" width="500">
 
 
-### To create a hex bin plot from points plot using leaflet
+### To create a hex bin plot from points and plot using leaflet
 This example uses the supplied Demographic and Health Survey data on BCG vaccination 
 in the DRC
 ```r
