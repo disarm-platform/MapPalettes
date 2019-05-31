@@ -15,7 +15,7 @@
 #' @examples # Generate hexbins and calculate mean values from points in each bin
 #' data("BCG_vaccination_DRC")
 #' hexbin_points(BCG_vaccination_DRC, n = 250, fun = mean, z = "coverage")
-
+#'
 hexbin_points <- function(points,
                           n,
                           fun,
