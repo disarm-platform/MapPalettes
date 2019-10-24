@@ -50,6 +50,10 @@ get_colors_from_image <- function(image, n=5, order_by = "luminance"){
         plot_order <- order(LCH@coords[,3])
       }
 
+      # Plot pic and colors
+      par(mfrow=c(1,2), mar=rep(2,4))
+      plot(pic)
+
       barplot(rep(1, length(colors)),
               axes=F,
               space=0,
