@@ -4,7 +4,7 @@
 \alias{hexbin_points}
 \title{The hexbin_points function}
 \usage{
-hexbin_points(points, n, fun, z, buffer = 0.1, return.na = TRUE)
+hexbin_points(points, n, fun, z, buffer = 0.1, return.na = FALSE)
 }
 \arguments{
 \item{points}{The SF points object to summarize}
@@ -15,7 +15,7 @@ hexbin_points(points, n, fun, z, buffer = 0.1, return.na = TRUE)
 
 \item{z}{The column of the SF points object to apply the function to}
 
-\item{buffer}{The distance by which to buffer the convex hull 
+\item{buffer}{The distance by which to buffer the convex hull
 of points used to create the hexbin cells as a proportion of the
 maximum interpoint distance. By default set to 0.1 (10%).}
 
@@ -26,6 +26,8 @@ This function allows you to create a hexbin plot from point data.
 }
 \examples{
 # Generate hexbins and calculate mean values from points in each bin
-hexbin_points("swz_elev", n = 100, function(x) mean(x, na.rm=TRUE))
+data("BCG_vaccination_DRC")
+hexbin_points(BCG_vaccination_DRC, n = 250, fun = mean, z = "coverage")
+
 }
 \keyword{hexbin}

@@ -4,13 +4,15 @@
 \alias{get_colors_from_image}
 \title{The get_colors_from_image function}
 \usage{
-get_colors_from_image(image, n = 5)
+get_colors_from_image(image, n = 5, order_by = "luminance")
 }
 \arguments{
 \item{image}{The path to the image. Supports most image types.
 See image_read from magick package.}
 
 \item{n}{The number of colors in the palette. Defaults to 5.}
+
+\item{order_by}{How to order the colors. One of 'luminance', 'chroma' or 'hue'. Defaults to 'luminance'}
 }
 \value{
 The hex codes of the n colors in the palette
@@ -19,5 +21,5 @@ The hex codes of the n colors in the palette
 This function allows you to identify the dominant colors in an image.
 }
 \examples{
-get_colors_from_image("https://upload.wikimedia.org/wikipedia/commons/e/e3/Red-eyed_Tree_Frog_\%28Agalychnis_callidryas\%29_1.png")
+get_colors_from_image("https://raw.githubusercontent.com/HughSt/mappalettes/master/images/nathan-lindahl-1j18807_ul0-unsplash.jpg",5)
 }

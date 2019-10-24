@@ -8,7 +8,7 @@
 #' @return The hex codes of the n colors in the palette
 #' @export
 #' @import magick raster colorspace
-#' @examples get_colors_from_image("https://upload.wikimedia.org/wikipedia/commons/e/e3/Red-eyed_Tree_Frog_%28Agalychnis_callidryas%29_1.png")
+#' @examples get_colors_from_image("https://raw.githubusercontent.com/HughSt/mappalettes/master/images/nathan-lindahl-1j18807_ul0-unsplash.jpg",5)
 
 
 get_colors_from_image <- function(image, n=5, order_by = "luminance"){
