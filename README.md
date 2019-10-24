@@ -54,8 +54,7 @@ leaflet() %>% addProviderTiles("CartoDB.DarkMatter") %>%
 
 ### To get main color groups from an image
 ```r
-get_colors_from_image("https://upload.wikimedia.org/wikipedia/commons/e/e3/Red-eyed_Tree_Frog_%28Agalychnis_callidryas%29_1.png",
-                       n = 8)
-[1] "#5E8527" "#35374A" "#A4AD5F" "#CD3F09" "#6BC221" "#342610" "#010100" "#567096"
+get_colors_from_image("https://raw.githubusercontent.com/HughSt/mappalettes/master/images/nathan-lindahl-1j18807_ul0-unsplash.jpg",5)
+[1] "#0C080B" "#142D40" "#425662" "#B3330C" "#F8A14B"
 ```
-<img src="https://raw.githubusercontent.com/HughSt/mappalettes/master/images/frog_colors.png" width="500">
+<img src="https://raw.githubusercontent.com/HughSt/mappalettes/master/images/fire_colors.png" width="500">
