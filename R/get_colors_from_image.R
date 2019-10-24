@@ -7,7 +7,7 @@
 #' @param order_by How to order the colors. One of 'luminance', 'chroma' or 'hue'. Defaults to 'luminance'
 #' @return The hex codes of the n colors in the palette
 #' @export
-#' @import magick raster
+#' @import magick raster colorspace
 #' @examples get_colors_from_image("https://upload.wikimedia.org/wikipedia/commons/e/e3/Red-eyed_Tree_Frog_%28Agalychnis_callidryas%29_1.png")
 
 
