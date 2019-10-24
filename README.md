@@ -57,4 +57,4 @@ leaflet() %>% addProviderTiles("CartoDB.DarkMatter") %>%
 get_colors_from_image("https://raw.githubusercontent.com/HughSt/mappalettes/master/images/nathan-lindahl-1j18807_ul0-unsplash.jpg",5)
 [1] "#0C080B" "#142D40" "#425662" "#B3330C" "#F8A14B"
 ```
-<img src="https://raw.githubusercontent.com/HughSt/mappalettes/master/images/fire_colors.png" width="500">
+<img src="https://raw.githubusercontent.com/HughSt/mappalettes/master/images/fire_colors.png" width="800">
