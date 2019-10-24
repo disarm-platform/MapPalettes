@@ -4,13 +4,14 @@
 #' @param image The path to the image. Supports most image types.
 #' See image_read from magick package.
 #' @param n The number of colors in the palette. Defaults to 5.
+#' @param order_by How to order the colors. One of 'luminance', 'chroma' or 'hue'. Defaults to 'luminance'
 #' @return The hex codes of the n colors in the palette
 #' @export
 #' @import magick raster
 #' @examples get_colors_from_image("https://upload.wikimedia.org/wikipedia/commons/e/e3/Red-eyed_Tree_Frog_%28Agalychnis_callidryas%29_1.png")
 
 
-get_colors_from_image <- function(image, n=5){
+get_colors_from_image <- function(image, n=5, order_by = "luminance"){
 
       pic <- image_read(image)
 
@@ -37,42 +38,26 @@ get_colors_from_image <- function(image, n=5){
       }
 
       # To sort colors, choose closest
-      # then sequentially choose nearest neighbour
-      RGBs <- means[,-1]
-      # num_clusters <- 2
-      # EPS <- 100
-      # clusters <- list(NULL)
-      # i <- 1
-      # while(num_clusters<5){
-      #
-      #   dbscan_res <- dbscan(RGBs, EPS, minPts = 1)
-      #   num_clusters <- length(unique(dbscan_res$cluster))
-      #   clusters[[i]] <- dbscan_res$cluster
-      #   EPS <- EPS - 0.1
-      #   i <- i+1
-      # }
-      #
-      # uniques <- unique(clusters)
-      # i <- length(uniques)-1
-      #
-      # cluster_order <- list()
-      # while(i > 0){
-      #   cluster_order[[i]] <-
-      #     which(uniques[[i]] %in% uniques[[i]][duplicated(uniques[[i]])])
-      #   i <- i - 1
-      # }
+      LCH <- as(hex2RGB(colors), "polarLUV")
 
-      hc <- hclust(dist(RGBs))
-      par(mfrow=c(1,2), mar=rep(2,4))
-      plot(pic)
+      if(order_by == "luminance"){
+      plot_order <- order(LCH@coords[,1])
+      }
+      if(order_by == "chroma"){
+        plot_order <- order(LCH@coords[,2])
+      }
+      if(order_by == "hue"){
+        plot_order <- order(LCH@coords[,3])
+      }
+
       barplot(rep(1, length(colors)),
               axes=F,
               space=0,
               border=NA,
-              col = colors[hc$order])
+              col = colors[plot_order])
       #mtext(colors, at=seq(0.5, n-0.5, length.out = n),
       #      las = 0, cex=0.6)
 
-      return(colors)
+      return(colors[plot_order])
 }
 
