@@ -11,7 +11,7 @@
 #' @keywords hexbin
 #' @examples # Generate hexbins and calculate raster mean in each bin
 #' data("swz_elev")
-#' hexbin_raster("swz_elev", n = 100, function(x) mean(x, na.rm=TRUE))
+#' hexbin_raster(swz_elev, n = 100, function(x) mean(x, na.rm=TRUE))
 
 hexbin_raster <- function(r, n, fun){
 
