@@ -1,19 +1,18 @@
 #' The hexbin_points function
 #'
 #' This function allows you to create a hexbin plot from point data.
-#' @param points The SF points object to summarize
+#' @param points The sfc points object to summarize
 #' @param n The approximate number of hexbin cells
 #' @param fun The function to apply when summarizing point values in each hexbin cell
 #' @param z The column of the SF points object to apply the function to
 #' @param buffer The distance by which to buffer the convex hull
 #' of points used to create the hexbin cells as a proportion of the
-#' maximum interpoint distance. By default set to 0.1 (10%).
+#' maximum interpoint distance. By default set to 0.1 (10\%)
 #' @param return.na Logical. Whether or not to return hexbin cells with NAs.
 #' @import sf sp
 #' @export
 #' @keywords hexbin
-#' @examples # Generate hexbins and calculate mean values from points in each bin
-#' data("BCG_vaccination_DRC")
+#' @examples data("BCG_vaccination_DRC")
 #' hexbin_points(BCG_vaccination_DRC, n = 250, fun = mean, z = "coverage")
 #'
 hexbin_points <- function(points,

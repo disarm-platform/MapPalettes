@@ -7,7 +7,7 @@
 hexbin_points(points, n, fun, z, buffer = 0.1, return.na = FALSE)
 }
 \arguments{
-\item{points}{The SF points object to summarize}
+\item{points}{The sfc points object to summarize}
 
 \item{n}{The approximate number of hexbin cells}
 
@@ -17,7 +17,7 @@ hexbin_points(points, n, fun, z, buffer = 0.1, return.na = FALSE)
 
 \item{buffer}{The distance by which to buffer the convex hull
 of points used to create the hexbin cells as a proportion of the
-maximum interpoint distance. By default set to 0.1 (10%).}
+maximum interpoint distance. By default set to 0.1 (10\%)}
 
 \item{return.na}{Logical. Whether or not to return hexbin cells with NAs.}
 }
@@ -25,7 +25,6 @@ maximum interpoint distance. By default set to 0.1 (10%).}
 This function allows you to create a hexbin plot from point data.
 }
 \examples{
-# Generate hexbins and calculate mean values from points in each bin
 data("BCG_vaccination_DRC")
 hexbin_points(BCG_vaccination_DRC, n = 250, fun = mean, z = "coverage")
 
