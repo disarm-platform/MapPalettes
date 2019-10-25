@@ -27,6 +27,5 @@ This function allows you to create a hexbin plot from point data.
 \examples{
 data("BCG_vaccination_DRC")
 hexbin_points(BCG_vaccination_DRC, n = 250, fun = mean, z = "coverage")
-
 }
 \keyword{hexbin}
