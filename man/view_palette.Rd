@@ -11,8 +11,8 @@ view_palette(palette, n = 5, type = "bars")
 "irish_flag", "tealberry_pie", "sunset", "the_joker" or "bruiser"
 or a vector of 5 hex codes.}
 
-\item{n}{The number of colors in the palette, Defaults to 5. Ignored if hex codes
-provided as `palette`}
+\item{n}{The number of colors in the palette, Defaults to 5. Set to length(palette) if hex codes
+provided as 'palette'.}
 
 \item{type}{Either "bars" which shows palette as bars,
 "raster" which shows elevation in Swaziland or "polys" which

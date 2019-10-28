@@ -5,7 +5,7 @@
 #' "irish_flag", "tealberry_pie", "sunset", "the_joker" or "bruiser"
 #' or a vector of 5 hex codes.
 #' @param n The number of colors in the palette, Defaults to 5. Set to length(palette) if hex codes
-#' provided as `palette`.
+#' provided as 'palette'.
 #' @param type Either "bars" which shows palette as bars,
 #' "raster" which shows elevation in Swaziland or "polys" which
 #' shows mean elevation in Swaziland by admin 2 area.
