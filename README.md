@@ -52,7 +52,7 @@ leaflet() %>% addProviderTiles("CartoDB.DarkMatter") %>%
 <img src="https://raw.githubusercontent.com/HughSt/mappalettes/master/images/hexbin_points_leaflet.png" width="800">
 
 
-### To get main color groups from an image
+### To get main color groups from an image (Photo by Nathan Lindahl on Unsplash.com)
 ```r
 get_colors_from_image("https://raw.githubusercontent.com/HughSt/mappalettes/master/images/nathan-lindahl-1j18807_ul0-unsplash.jpg",5)
 [1] "#0C080B" "#142D40" "#425662" "#B3330C" "#F8A14B"
