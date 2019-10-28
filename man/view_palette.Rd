@@ -4,14 +4,15 @@
 \alias{view_palette}
 \title{The view palette function}
 \usage{
-view_palette(name, n = 5, type = "bars")
+view_palette(palette, n = 5, type = "bars")
 }
 \arguments{
-\item{name}{The name of the palette. One of "green_machine",
+\item{palette}{The name of the palette. One of "green_machine",
 "irish_flag", "tealberry_pie", "sunset", "the_joker" or "bruiser"
 or a vector of 5 hex codes.}
 
-\item{n}{The number of colors in the palette, Defaults to 5.}
+\item{n}{The number of colors in the palette, Defaults to 5. Ignored if hex codes
+provided as `palette`}
 
 \item{type}{Either "bars" which shows palette as bars,
 "raster" which shows elevation in Swaziland or "polys" which
