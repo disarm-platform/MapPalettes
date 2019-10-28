@@ -1,10 +1,11 @@
 #' The view palette function
 #'
 #' This function allows you to easily view beautiful palettes designed for maps.
-#' @param name The name of the palette. One of "green_machine",
+#' @param palette The name of the palette. One of "green_machine",
 #' "irish_flag", "tealberry_pie", "sunset", "the_joker" or "bruiser"
 #' or a vector of 5 hex codes.
-#' @param n The number of colors in the palette, Defaults to 5.
+#' @param n The number of colors in the palette, Defaults to 5. Ignored if hex codes
+#' provided as `palette`
 #' @param type Either "bars" which shows palette as bars,
 #' "raster" which shows elevation in Swaziland or "polys" which
 #' shows mean elevation in Swaziland by admin 2 area.
@@ -16,14 +17,14 @@
 #' view_palette(c("#1D3141","#096168","#209478","#75C56E","#E2EE5E"),
 #' type="raster")
 
-view_palette <- function(name,
+view_palette <- function(palette,
                          n = 5,
                          type = "bars"){
 
-  if(length(name)>1){
-    palette <- name
+  if(length(palette)>1){
+    palette <- palette
   }else{
-    palette <- map_palette(name, n)
+    palette <- map_palette(palette, n)
   }
 
   if(type=="bars"){
@@ -36,7 +37,7 @@ view_palette <- function(name,
 
   if(type=="polys"){
     data("swz_adm2")
-    pal <- leaflet::colorNumeric(palette, swz_adm2$elev)
+    pal <- leaflet::colorQuantile(palette, swz_adm2$elev, n = length(palette))
     plot(swz_adm2, col=pal(swz_adm2$elev))
   }
 
