@@ -13,6 +13,10 @@
 
 get_colors_from_image <- function(image, n=5, order_by = "luminance"){
 
+      if(!(order_by %in% c("luminance", "hue", "chroma"))){
+        stop("'order_by' needs to be one of 'luminance', 'hue' or 'chroma'")
+      }
+
       pic <- image_read(image)
 
       # Resample to lower res
