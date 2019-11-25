@@ -26,5 +26,5 @@ hexbin_raster <- function(r, n, fun){
 
   # Extract with function
   HexPols$stat <- r_velox$extract(sp=HexPols, fun=fun)
-  return(HexPols)
+  return(st_as_sf(HexPols))
 }

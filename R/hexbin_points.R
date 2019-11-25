@@ -37,7 +37,7 @@ hexbin_points <- function(points,
   set.seed(1981)
   HexPts <- spsample(hull, n=n, type="hexagonal")
   HexPols <- HexPoints2SpatialPolygons(HexPts)
-  #HexPols_sf <- st_as_sf(HexPols)
+
 
   # Calc which hexbin each point is in
   points_sp$hexbin <- over(points_sp, HexPols)
@@ -51,5 +51,5 @@ hexbin_points <- function(points,
   HexPols <- merge(HexPols, summ_stat, by = "ID", all.x = return.na)
 
   # Return
-  return(HexPols)
+  return(st_as_sf(HexPols))
 }
