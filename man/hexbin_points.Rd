@@ -25,7 +25,13 @@ maximum interpoint distance. By default set to 0.1 (10\%)}
 This function allows you to create a hexbin plot from point data.
 }
 \examples{
+# Load BCG vaccination data
 data("BCG_vaccination_DRC")
+
+# Get mean coverage per hexbin
 hexbin_points(BCG_vaccination_DRC, n = 250, fun = mean, z = "coverage")
+
+# Get number of points per hexbin
+hexbin_points(BCG_vaccination_DRC, n = 250, fun = length, z = "coverage")
 }
 \keyword{hexbin}
