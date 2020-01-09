@@ -12,8 +12,15 @@
 #' @import sf sp
 #' @export
 #' @keywords hexbin
-#' @examples data("BCG_vaccination_DRC")
+#' @examples
+#' # Load BCG vaccination data
+#' data("BCG_vaccination_DRC")
+#'
+#' # Get mean coverage per hexbin
 #' hexbin_points(BCG_vaccination_DRC, n = 250, fun = mean, z = "coverage")
+#'
+#' # Get number of points per hexbin
+#' hexbin_points(BCG_vaccination_DRC, n = 250, fun = length, z = "coverage")
 
 hexbin_points <- function(points,
                           n,
